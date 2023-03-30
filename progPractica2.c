@@ -35,8 +35,8 @@ int main(int argc, char* argv[]) {
 		HINSTANCE hInpOutDll;
 		hInpOutDll = LoadLibrary("D:\\Ricardo\\ITESM\\IEC\\PuertoParalelo\\Practica1\\Debug\\InpOutx64.DLL");	//Ruta y nombre del DLL
 		if (hInpOutDll != NULL)	{
-			gfpOut32 = (lpOut32)GetProcAddress(hInpOutDll, "mySend");	//DeberÃ­a ser Out64 pero el DLL tiene el "system call" "hardcoded" a 32
-			gfpInp32 = (lpInp32)GetProcAddress(hInpOutDll, "myGet");	//DeberÃ­a ser Inp64 pero el DLL tiene el "system call" "hardcoded" a 32
+			gfpOut32 = (lpOut32)GetProcAddress(hInpOutDll, "send");
+			gfpInp32 = (lpInp32)GetProcAddress(hInpOutDll, "get");
 			gfpIsInpOutDriverOpen = (lpIsInpOutDriverOpen)GetProcAddress(hInpOutDll, "IsInpOutDriverOpen");
 			gfpIsXP64Bit = (lpIsXP64Bit)GetProcAddress(hInpOutDll, "IsXP64Bit");
 
