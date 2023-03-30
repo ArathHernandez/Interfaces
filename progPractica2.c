@@ -7,7 +7,6 @@ typedef short(__stdcall *lpInp32)(short);
 typedef BOOL(__stdcall *lpIsInpOutDriverOpen)(void);
 typedef BOOL(__stdcall *lpIsXP64Bit)(void);
 
-//Apuntadores a rutinas del DLL Ãºtiles para acceso al "Device Driver"
 lpOut32 gfpOut32;
 lpInp32 gfpInp32;
 lpIsInpOutDriverOpen gfpIsInpOutDriverOpen;
